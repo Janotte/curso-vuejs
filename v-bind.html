@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diretivas: v-bind</title>
+</head>
+
+<body>
+
+    <div id="directives">
+
+        <h2>Acesse o site abaixo</h2>
+
+        <a v-bind:href="url">Site da Hobby</a>
+
+        <p :[arg]="value">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus veritatis ipsum autem maiores, sequi aperiam
+            voluptatum optio repudiandae a quos? Accusamus quas fugit in sequi quibusdam velit officia odio suscipit?
+        </p>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue2-filters/dist/vue2-filters.min.js"></script>
+    <script>
+        let app = new Vue({
+            el: '#directives',
+            data: {
+                url: 'https://hobby.inf.br',
+                arg: 'title',
+                value:'Paragrafo de exemplo'
+            }
+        })
+    </script>
+</body>
+
+</html>
